@@ -1,0 +1,27 @@
+{
+  "name": "orbix360",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Plataforma SaaS de gestão de imagens de produto e visualização 360º.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "migrate": "tsx scripts/migrate.ts",
+    "build:client": "tsx scripts/build-client.ts",
+    "build": "npm run migrate && npm run build:client",
+    "dev": "npm run build:client && tsx src/server/index.ts",
+    "start": "npm run migrate && tsx src/server/index.ts"
+  },
+  "dependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "sharp": "0.34.5",
+    "esbuild": "0.27.7"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "tsx": "4.21.0"
+  }
+}
